@@ -1,4 +1,5 @@
 "use client";
+import AudioPlayer from "@/components/AudioPlayer";
 import styles from "./page.module.css";
 import { useRef, useState } from "react";
 
@@ -19,13 +20,7 @@ export default function Home() {
   };
   return (
     <main className={styles.main}>
-      <button
-        onClick={() => {
-          isPlaying ? pause() : play();
-        }}
-      >
-        {isPlaying ? "Stop" : "Play"}
-      </button>
+      <AudioPlayer audioUrl="./audio/arte-2min.mp3"></AudioPlayer>
     </main>
   );
 }
